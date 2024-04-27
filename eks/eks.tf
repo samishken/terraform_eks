@@ -148,11 +148,11 @@ resource "aws_eks_node_group" "frontend" {
     source_security_group_ids = [var.sg_ids]
   } 
 
-  taint {
-    key = "frontend"
-    value = "yes"
-    effect = "NO_SCHEDULE"
-  }
+  # taint {
+  #   key = "frontend"
+  #   value = "yes"
+  #   effect = "NO_SCHEDULE"
+  # }
   
   subnet_ids = [var.subnet_ids[0],var.subnet_ids[1]]
 
